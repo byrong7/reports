@@ -53,6 +53,7 @@ if st.session_state.authenticated:
     for owner in owners:
         if st.sidebar.button(f"{owner}"):
             if owner not in st.session_state.selected_owners:
+                st.session_state.selected_owners = []
                 st.session_state.selected_owners.append(owner)
     # Clear Filters Button
     if st.sidebar.button("Clear Filters"):
